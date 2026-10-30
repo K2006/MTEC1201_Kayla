@@ -3,6 +3,7 @@
 // CONCEPT: A SKETCH I DID DURING CLASS AND IT ENDED UP LOOKING LIKE A ROBOT WITH EVERYTHING BEING MISMATCHED. 
 //          I HOPE TO EXPAND ON IT WHERE IT CAN MOVE OR BLINK AND HAVE A BODY.
 // INSTRUCTIONS: MOVE MOUSE TO MAKE EYES FOLLOW CURSOR, CLICK CURSOR TO RESET
+//               PRESS SPACEBAR TO CHANGE FACE COLOR
 //___________________________________________________________________________________________________________________
 // Declaring my variables eyex and eyey 
 let eyeX = 0
