@@ -7,6 +7,7 @@
 // Declaring my variables eyex and eyey 
 let eyeX = 0
 let eyeY = 0
+let faceColor = 'BLUE'
 
 function setup() {
   createCanvas(500, 500);
@@ -16,6 +17,21 @@ function setup() {
 function mousePressed() {
 eyeX = -0 
 eyeY = 0
+}
+
+function keyPressed() {
+  if (keyCode === 32)
+    changefaceColor ()
+}
+
+function changefaceColor() {
+  faceColor = random (['GREEN', 'YELLOW', 'PURPLE', 'ORANGE', 'BLUE'])
+}
+
+function drawFace () {
+  strokeWeight (4)
+  fill(faceColor)
+   square (205, 200, 140) 
 }
 
 function draw() {
@@ -28,9 +44,7 @@ eyeY = lerp(eyeY, mouseY - 250, 0.05)
 
 // FACE
 stroke ('BLACK')
-strokeWeight (4)
-  fill("BLUE")
-   square (205, 200, 140) 
+drawFace ()
 
 // OUTER EYE
 strokeWeight (2)
@@ -40,7 +54,7 @@ strokeWeight (2)
 
 // INNER EYE + PUPIL COLOR (EDIT: eyex moving pupil left/right, eyey moving pupil up/down, constrain makes sure it is kept in eye)
  noStroke();
-  fill("BLACK")
+  fill('BLACK')
     circle (250 + constrain(eyeX, -10, 10), 250 + constrain(eyeY, -10, 10), 25)
     square (288 + constrain(eyeX, -10, 10), 240 + constrain(eyeY, -10, 10), 24)
 
