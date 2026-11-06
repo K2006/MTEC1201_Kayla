@@ -40,19 +40,14 @@ function drawFace () {
   strokeWeight (4)
   fill(faceColor)
    square (205, 200, 140) 
-}
 
-function draw() {
-  background('PINK');
-
-// lerp makes pupil slowly move
+   // lerp makes pupil slowly move
 eyeX = lerp(eyeX, mouseX - 250, 0.05)
 eyeY = lerp(eyeY, mouseY - 250, 0.05)
 //_________________________________________________________________________________________________________________
 
-// FACE
+// FACE 
 stroke ('BLACK')
-//drawFace ()
 
 // OUTER EYE
 strokeWeight (2)
@@ -79,6 +74,45 @@ strokeWeight (2)
     else if (expression === 'sad')
       arc (275, 330, 50, 30, PI, TWO_PI)
     else circle (275, 320, 25)
+}
+
+function draw() {
+  background('PINK');
+  drawFace()
+// // lerp makes pupil slowly move
+// eyeX = lerp(eyeX, mouseX - 250, 0.05)
+// eyeY = lerp(eyeY, mouseY - 250, 0.05)
+// //_________________________________________________________________________________________________________________
+
+// // FACE 
+// stroke ('BLACK')
+// drawFace ()
+
+// // OUTER EYE
+// strokeWeight (2)
+//   fill('WHITE')
+//     circle (250, 250, 50)
+//     square (276, 227, 48)
+
+// // INNER EYE + PUPIL COLOR (EDIT: eyex moving pupil left/right, eyey moving pupil up/down, constrain makes sure it is kept in eye)
+//  noStroke();
+//   fill('BLACK')
+//     circle (250 + constrain(eyeX, -10, 10), 250 + constrain(eyeY, -10, 10), 25)
+//     square (288 + constrain(eyeX, -10, 10), 240 + constrain(eyeY, -10, 10), 24)
+
+// // NOSE
+//  noStroke();
+//   fill("TEAL")
+//     ellipse (270, 290, 20, 30)
+
+// // MOUTH
+//  noStroke();
+//   fill("RED")
+//   if (expression === 'happy')
+//     arc (275, 310, 50, 30, 0, PI)
+//     else if (expression === 'sad')
+//       arc (275, 330, 50, 30, PI, TWO_PI)
+//     else circle (275, 320, 25)
 
 
 
