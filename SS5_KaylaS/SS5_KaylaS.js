@@ -3,7 +3,7 @@
 // CONCEPT: A SKETCH I DID DURING CLASS AND IT ENDED UP LOOKING LIKE A ROBOT WITH EVERYTHING BEING MISMATCHED. 
 //          I HOPE TO EXPAND ON IT WHERE IT CAN MOVE OR BLINK AND HAVE A BODY.
 // INSTRUCTIONS: MOVE MOUSE TO MAKE EYES FOLLOW CURSOR, CLICK CURSOR TO RESET
-//               PRESS SPACEBAR TO CHANGE FACE COLOR, PRESS Z FOR HAPPY, X FOR SAD, AND C FOR SUPRISED
+//               PRESS SPACEBAR TO CHANGE FACE COLOR, PRESS 1 FOR HAPPY, 2 FOR SAD, AND 3 FOR SUPRISED
 //___________________________________________________________________________________________________________________
 // Declaring my variables eyex and eyey 
 let eyeX = 0
@@ -24,11 +24,11 @@ eyeY = 0
 function keyPressed() {
   if (keyCode === 32)
     changefaceColor ()
-  if (key === 'z') 
+  if (key === '1') 
     expression ='happy'
-  else if  (key === 'x') 
+  else if  (key === '2') 
     expression = 'sad'
-  else if (key === 'c')
+  else if (key === '3')
     expression = 'suprised'
 }
 
